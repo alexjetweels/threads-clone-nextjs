@@ -4,11 +4,9 @@ import { sidebarLinks } from '@/constants/index';
 import { SignedIn, SignOutButton, useAuth } from '@clerk/nextjs';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
-import path from 'path';
+import { usePathname } from 'next/navigation';
 
 function LeftSideBar() {
-  const router = useRouter();
   const pathName = usePathname();
   const { sessionId } = useAuth();
 
