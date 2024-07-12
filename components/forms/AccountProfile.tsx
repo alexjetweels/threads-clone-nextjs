@@ -24,15 +24,15 @@ import { ChangeEvent } from 'react';
 import { Textarea } from '../ui/textarea';
 
 interface Props {
-  user: User | {};
+  user: Partial<User>;
   btnTitle: string;
 }
 const AccountProfile = ({ user, btnTitle }: Props) => {
   const form = useForm({
     resolver: zodResolver(UserValidation),
     defaultValues: {
-      profile_photo: '',
-      name: '',
+      profile_photo: user?.imageUrl || '',
+      name: '' ,
       userName: '',
       bio: '',
     },
