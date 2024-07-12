@@ -44,8 +44,7 @@ function LeftSideBar() {
         <SignedIn>
           <SignOutButton
             redirectUrl='/sign-in'
-
-            // signOutOptions={{ sessionId }}
+            signOutOptions={{ sessionId: sessionId ?? '' }}
           >
             <div className='flex gap-4 p-4 cursor-pointer'>
               <Image
